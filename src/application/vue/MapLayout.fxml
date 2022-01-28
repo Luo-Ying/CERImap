@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import classes_javafx.ResizableStackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MapController">
+   <children>
+   	  
+      <ResizableStackPane fx:id="stackPane2" alignment="CENTER_LEFT" prefHeight="700.0" prefWidth="1000.0">
+      	<children>
+                  		<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2000.0" prefWidth="300.0" style="-fx-border-style: solid inside; -fx-border-width: 5; -fx-border-color: #0d346b">
+                           <center>
+            			      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #4476bd" BorderPane.alignment="CENTER">
+            			         <children>
+            			            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CERI Map" textAlignment="CENTER" wrappingWidth="250.13671875">
+            			               <font>
+            			                  <Font size="24.0" />
+            			               </font>
+            			               <VBox.margin>
+            			                  <Insets bottom="5.0" top="10.0" />
+            			               </VBox.margin>
+            			            </Text>
+            			            <Separator prefWidth="200.0" style="-fx-background-color: #ce5a82;">
+            			               <cursor>
+            			                  <Cursor fx:constant="SW_RESIZE" />
+            			               </cursor>
+            			            </Separator>
+            			            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search a city" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="299.73681640625">
+            			               <font>
+            			                  <Font size="14.0" />
+            			               </font>
+            			               <VBox.margin>
+            			                  <Insets top="10.0" />
+            			               </VBox.margin>
+            			            </Text>
+            			            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+            			               <children>
+            			                  <TextField fx:id="city" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="41.0" prefWidth="210.0" promptText="Enter your city" />
+            			                  <Button fx:id="btnGO" alignment="CENTER" mnemonicParsing="false" onAction="#getNameVille" prefHeight="40.0" prefWidth="50.0" text="GO" textFill="#111010" />
+            			               </children>
+            			            </HBox>
+            			            <Separator prefWidth="200.0" style="-fx-background-color: #ce5a82;" />
+            			            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Saerch a itinerary" textAlignment="CENTER" wrappingWidth="298.93682861328125">
+            			               <font>
+            			                  <Font size="14.0" />
+            			               </font>
+            			               <VBox.margin>
+            			                  <Insets top="10.0" />
+            			               </VBox.margin>
+            			            </Text>
+            			            <VBox prefHeight="158.0" prefWidth="300.0">
+            			               <children>
+                              <HBox prefHeight="50.0" prefWidth="300.0">
+                                 <children>
+                                    <TextField fx:id="numAddrFrom" prefHeight="40.0" prefWidth="50.0" promptText="N°">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                  			                  <TextField fx:id="addrFrom" maxWidth="208.0" prefHeight="40.0" prefWidth="208.0" promptText="Saisissez l'adresse de départ">
+            			                  </TextField>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="57.0" prefWidth="300.0">
+                                 <children>
+                                    <TextField fx:id="numAddrTo" prefHeight="40.0" prefWidth="50.0" promptText="N°">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                  			                  <TextField fx:id="addrTo" maxWidth="208.0" prefHeight="40.0" prefWidth="208.0" promptText="Saisissez l'adresse d'arrivée">
+            			                  </TextField>
+                                 </children>
+                              </HBox>
+            			                  <HBox prefHeight="50.0" prefWidth="200.0">
+            			                     <children>
+            			                        <Button fx:id="btnSearchItinerary" mnemonicParsing="false" onAction="#searching" prefHeight="35.0" prefWidth="110.0" text="search">
+            			                           <HBox.margin>
+            			                              <Insets left="30.0" right="20.0" top="5.0" />
+            			                           </HBox.margin>
+            			                        </Button>
+            			                        <Button fx:id="btnStopSearching" mnemonicParsing="false" onAction="#stopSearching" prefHeight="35.0" prefWidth="110.0" text="stop">
+            			                           <HBox.margin>
+            			                              <Insets top="5.0" />
+            			                           </HBox.margin>
+            			                        </Button>
+            			                     </children>
+            			                  </HBox>
+            			               </children>
+            			            </VBox>
+            			         </children>
+            			      </VBox>
+                           </center>
+            			</BorderPane>
+      	</children>
+      </ResizableStackPane>
+      
+   </children>
+</AnchorPane>
